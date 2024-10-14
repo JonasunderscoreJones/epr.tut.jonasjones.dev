@@ -103,6 +103,7 @@ async function handleDefaultGet(env) {
       <body>
         <div class="container">
           <h1>${selectedFile ? selectedFile.name : 'No file selected'}</h1>
+          <p style="margin:0;padding:0;color:gray">Scan code to download</p>
           <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?data=${selectedFile ? `https://cdn.jonasjones.dev/uni/ws2425/tutorien/epr/loesungen/${selectedFile.filename}` : ''}" alt="QR Code"/>
           <a class="btn download-btn" href="https://cdn.jonasjones.dev/uni/ws2425/tutorien/epr/loesungen/${selectedFile.filename}">Download</a>
           <a class="btn" href="/all">View All Files</a>
