@@ -122,7 +122,7 @@ async function handleAllGet(env) {
 
   const listItems = index.map(file => `
     <li style="background-color: ${file.selected ? '#e0e0e0' : 'white'};">
-      ${file.name} - Uploaded on ${file.upload_date}
+      <b>${file.name}</b> - Uploaded on ${file.upload_date}
       <a class="btn" href="https://cdn.jonasjones.dev/uni/ws2425/tutorien/epr/loesungen/${file.filename}">Download</a>
       <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?data=https://cdn.jonasjones.dev/uni/ws2425/tutorien/epr/loesungen/${file.filename}" alt="QR Code" style="width: 100px;"/>
     </li>
