@@ -107,6 +107,7 @@ async function handleDefaultGet(env) {
           <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?data=${selectedFile ? `https://cdn.jonasjones.dev/uni/ws2425/tutorien/epr/loesungen/${selectedFile.filename}` : ''}" alt="QR Code"/>
           <a class="btn download-btn" href="https://cdn.jonasjones.dev/uni/ws2425/tutorien/epr/loesungen/${selectedFile.filename}">Download</a>
           <a class="btn" href="/all">View All Files</a>
+          <a style="padding-top:10px" href="https://discord.gg/wVXF7b6CkS" >Discord</a>
         </div>
       </body>
     </html>
