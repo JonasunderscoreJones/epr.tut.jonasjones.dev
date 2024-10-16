@@ -50,7 +50,7 @@ async function handleDefaultGet(env) {
   return new Response(`
     <html>
       <head>
-        <title>File Download</title>
+        <title>Tutorium Resources</title>
         <style>
           body, html {
             margin: 0;
@@ -132,7 +132,7 @@ async function handleAllGet(env) {
   return new Response(`
     <html>
       <head>
-        <title>All Files</title>
+        <title>All Files - Tutorium Resources</title>
         <style>
           body { font-family: Arial, sans-serif; background: #f0f0f0; padding: 20px; }
           .container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
@@ -173,7 +173,7 @@ async function handleManageGet(env) {
   return new Response(`
     <html>
       <head>
-        <title>Manage Files</title>
+        <title>Manage Files - Tutorium Resources</title>
         <style>
           body { font-family: Arial, sans-serif; background: #f0f0f0; padding: 20px; }
           .container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
