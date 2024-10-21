@@ -50,6 +50,7 @@ async function handleDefaultGet(env) {
   return new Response(`
     <html>
       <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <title>Tutorium Resources</title>
         <style>
           body, html {
@@ -109,6 +110,9 @@ async function handleDefaultGet(env) {
           <a class="btn" href="/all">View All Files</a>
           <a style="padding-top:10px" href="https://discord.gg/wVXF7b6CkS" >Discord</a>
         </div>
+        <a href="/manage" title="Manage Uploads" style="position:absolute;bottom:20px;right:20px;color: black">
+          <i class="fas fa-cog" style="font-size: 24px;"></i>
+        </a>
       </body>
     </html>
   `, { headers: { 'Content-Type': 'text/html' } });
