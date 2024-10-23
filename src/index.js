@@ -15,6 +15,8 @@ export default {
         return await handleDefaultGet(env);
       case '/all':
         return await handleAllGet(env);
+      case '/qr':
+        return await handleQrGet(env);
       case '/manage':
         return await handleManageGet(env);
       case '/manage/upload':
@@ -264,6 +266,52 @@ async function handleManageGet(env) {
         </script>
       </body>
     </html>
+  `, { headers: { 'Content-Type': 'text/html' } });
+}
+
+async function handleQrGet(env) {
+  const index = await getIndex(env);
+  const selectedFile = index.find((file) => file.selected);
+
+  return new Response(`
+<html>
+  <head>
+    <title>QR Code - Tutorium Resources</title>
+    <style>
+      body { font-family: Arial, sans-serif; background: #f0f0f0; padding: 20px; }
+      .container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+
+      img {
+        width: 80%; /* Default width */
+        height: auto; /* Maintain aspect ratio */
+        display: block;
+        margin: 0 auto;
+      }
+
+      /* Portrait mode */
+      @media (orientation: portrait) {
+        img {
+          widht: 80vw; /* 80% of viewport height */
+          height: auto; /* Allow width to adjust based on height */
+        }
+      }
+
+      /* Landscape mode */
+      @media (orientation: landscape) {
+        img {
+          height: 80vh; /* 80% of viewport width */
+          width: auto; /* Maintain aspect ratio */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?data=${"https://epr.tut.jonasjones.dev"}" alt="QR Code"/>
+    </div>
+  </body>
+</html>
+
   `, { headers: { 'Content-Type': 'text/html' } });
 }
 
