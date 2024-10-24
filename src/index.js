@@ -101,6 +101,24 @@ async function handleDefaultGet(env) {
           .download-btn:hover, .btn:hover {
             background-color: #0056b3;
           }
+          fa-cog {
+            font-size: 24px;
+          }
+          @media (orientation: portrait) {
+            h1 {
+              font-size: 68px;
+            }
+            p, a {
+              font-size: 48px;
+              border-radius: 20px;
+            }
+            .qr-code {
+              width: 80vw;
+            }
+            fa-cog {
+              font-size: 96px;
+            }
+          }
         </style>
       </head>
       <body>
@@ -113,7 +131,7 @@ async function handleDefaultGet(env) {
           <a style="padding-top:10px" href="https://discord.gg/wVXF7b6CkS" >Discord</a>
         </div>
         <a href="/manage" title="Manage Uploads" style="position:absolute;bottom:20px;right:20px;color: black">
-          <i class="fas fa-cog" style="font-size: 24px;"></i>
+          <i class="fas fa-cog"></i>
         </a>
       </body>
     </html>
